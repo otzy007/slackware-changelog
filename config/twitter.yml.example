@@ -1,3 +1,4 @@
+# Edit this file with your Twitter Credentials an rename it as twitter.yml
 development:
   consumer_key32: ' asghry65r'
   consumer_secret32: ''
