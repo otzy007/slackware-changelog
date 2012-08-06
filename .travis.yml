@@ -11,5 +11,5 @@ before_script:
   - rake db:test:prepare
 script:
   - rake test TEST=test/unit/changelog_test.rb
-  - rake test TEST=test/functional/change_log_controller_test.rb
+  - rake test TEST=test/functional/changelog_controller_test.rb
   - rake test TEST=test/functional/homepage_controller_test.rb
