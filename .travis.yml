@@ -10,4 +10,4 @@ before_script:
   - rake db:seed
   - rake db:test:prepare
 script:
-  - rake test
+  - rake test TEST=test/unit/changelog_test.rb
