@@ -1,0 +1,35 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+     <a class="brand">Slackware ChangeLog</a>
+     <ul class="nav">
+      <li class="active">
+	<%= link_to 'Home', @homepage_index %>
+      </li>
+	<li><a href="/homepage/about">About</a></li>
+     </ul>
+    </div>
+  </div>
+</div>
+</br>
+<h2>You can subscribe to the ChangeLog for: </h2>
+
+<ul id="myTabs" class="nav nav-tabs">
+  <li class="active">
+    <a href="#slackware" data-toggle="tab">Slackware-Current</a>
+  </li>
+  <li><a href="#slackware64" data-toggle="tab">Slackware64-Current</a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade in active" id="slackware">
+    <p> <h3> On Twitter: </h3>
+      <%=raw Tweet.first.current %>
+    </p>
+  </div>
+  <div class="tab-pane" id="slackware64">
+    <p> <h3> On Twitter: </h3>
+      <%=raw Tweet.first.current64 %>
+    </p>
+  </div>
+</div>
