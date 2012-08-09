@@ -24,11 +24,11 @@
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="slackware">
      <h3> On Twitter: </h3>
-      <%=raw Tweet.first.current %>
+      <%= Tweet.first.current.html_safe %>
     
   </div>
   <div class="tab-pane" id="slackware64">
     <h3> On Twitter: </h3>
-      <%=raw Tweet.first.current64 %>
+      <%= Tweet.first.current64.html_safe %>
   </div>
 </div>

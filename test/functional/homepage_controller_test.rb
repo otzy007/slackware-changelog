@@ -9,8 +9,10 @@ class Tweet
     end
   end
 end
+
 class HomepageControllerTest < ActionController::TestCase
   test "should get index" do
+    Tweet.first.update_attributes({:current => "lol", :current64 => "haha"}, :without_protection => true)
     get :index
     assert_response :success
   end
