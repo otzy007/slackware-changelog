@@ -43,4 +43,5 @@ require 'open-uri'
 #
 group :production do
  gem 'pg'
+ gem 'google-analytics-rails'
 end
