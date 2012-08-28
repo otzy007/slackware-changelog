@@ -1,5 +1,6 @@
 # Controller to check for new updates in the changelog
 class ChangeLogController < ApplicationController
+  layout "changelog"
   # Check for new updates
   def index
     # Store the repositories URL
