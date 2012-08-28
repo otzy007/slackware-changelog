@@ -4,7 +4,7 @@ class Changelog < ActiveRecord::Base
   def self.update?(version)
     begin
       # Get the changelog file
-      changelogf = open "ftp://ftp.osuosl.org/pub/slackware/slackware#{version == 32 ? '' : '64'}-current/ChangeLog.txt"      
+      changelogf = open "ftp://ftp.osuosl.org/pub/slackware/slackware#{version == 32 ? '' : '64'}-current/ChangeLog.txt"
       oldChange = Changelog.first
       changelog = changelogf.read[0 .. 113]
      
