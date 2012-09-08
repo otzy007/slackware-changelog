@@ -8,7 +8,9 @@ resources :change_log, :only => [:index]
 root :to => 'homepage#index'
 
 match 'homepage/about' => 'homepage#about' 
-
+match 'atom' => 'atom_feed#index', :as => :feed, :defaults => { :format => 'atom' }
+resources :atom_feed, :only => [:index], :defaults => { :format => 'atom' }
+match 'atom_feed/:id' => 'atom_feed#show', :defaults => { :format => 'html' }
 #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 

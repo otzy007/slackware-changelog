@@ -23,12 +23,42 @@
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="slackware">
-     <h3> On Twitter: </h3>
-      <%= Tweet.first.current.html_safe %>
-    
+     <div class="row-fluid">
+      <div class="span6">
+      <h3> On Twitter: </h3>
+	 <%= Tweet.first.current.html_safe %>
+      </div>
+      <div class="span6">
+	 <h3> Or by Atom feed: </h3>
+	 <div class="well">
+	    <div class="row-fluid">
+	       <div class="span6"><h4><%= @posts[32].title %></h4></div>
+	       <div class="span6"><a class="btn btn-primary btn-small" href="/atom_feed/">
+		  Subscribe</a></div>
+	    </div>
+	    <p><%= (@posts[32].body[0..250] + link_to(" <b>...</b>".html_safe, feed_post_url(@posts[32]))).html_safe %></p>
+	    
+	 </div>
+      </div>
+    </div>
   </div>
   <div class="tab-pane" id="slackware64">
-    <h3> On Twitter: </h3>
-      <%= Tweet.first.current64.html_safe %>
+   <div class="row-fluid">
+      <div class="span6">
+	 <h3> On Twitter: </h3>
+	    <%= Tweet.first.current64.html_safe %>
+      </div>
+      <div class="span6">
+	<h3> Or by Atom feed: </h3>
+	 <div class="well">
+	    <div class="row-fluid">
+	       <div class="span6"><h4><%= @posts[64].title %></h4></div>
+	       <div class="span6"><a class="btn btn-primary btn-small" href="/atom_feed/?arch=64">Subscribe</a></div>
+	    </div>
+	    <p><%= (@posts[64].body[0..250] + link_to(" <b>...</b>".html_safe, feed_post_url(@posts[64]))).html_safe %></p>
+	    
+	 </div>
+      </div>
+   </div>
   </div>
 </div>

@@ -15,3 +15,6 @@ script:
   - rake test TEST=test/unit/changelog_test.rb
   - rake test TEST=test/functional/change_log_controller_test.rb
   - rake test TEST=test/functional/homepage_controller_test.rb
+  - rake test TEST=test/functional/atom_feed_controller_test.rb
+  - rake test TEST=test/unit/helpers/atom_feed_helper_test.rb
+  - rake test TEST=test/unit/feed_post_test.rb
