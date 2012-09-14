@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class ChangelogTest < ActiveSupport::TestCase
+  test "update the changelog table" do
+     a = Changelog.first
+     a.update_changelog "test", 32
+     assert a.current == "test"
+  end
   test "download of the current changelog" do
     assert Changelog.update?(32)
   end

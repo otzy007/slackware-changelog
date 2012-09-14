@@ -1,5 +1,6 @@
 *~
 config/twitter.yml
+config/newrelic.yml
 db/*.sqlite3
 tmp/*
 log/*

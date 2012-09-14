@@ -1,5 +1,9 @@
 # Model to check for new updates and store them
 class Changelog < ActiveRecord::Base
+  # Update the changelog table
+  def update_changelog(changelog, version)
+     self.send(:update_attributes, {"current#{version == 32 ? '' : '64'}".to_sym => changelog}, :without_protection => true)
+  end
   # Check if there are any new updates available
   def self.update?(version)
     begin
@@ -18,7 +22,7 @@ class Changelog < ActiveRecord::Base
 	return false
       end
       # Update the database
-      oldChange.send(:update_attributes, {"current#{version == 32 ? '' : '64'}".to_sym => changelog}, :without_protection => true)
+      oldChange.update_changelog(changelog, version)
 
       # Add a new feed post
       feed = FeedPost.new(version:version, title:body.lines.first, body:body.split("+--------------------------+")[0].lines.drop(1).join)
