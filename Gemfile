@@ -44,4 +44,5 @@ require 'open-uri'
 group :production do
  gem 'pg'
  gem 'google-analytics-rails'
+ gem 'newrelic_rpm'
 end
