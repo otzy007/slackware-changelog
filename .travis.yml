@@ -6,7 +6,7 @@ rvm:
 gemfile: Gemfile
 before_script:
   - export USE_BUNDLER=yes
-  - rake db:drop
+#   - rake db:drop
   - rake db:create
   - rake db:migrate
   - rake db:seed
