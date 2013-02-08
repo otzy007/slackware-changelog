@@ -36,7 +36,7 @@
 	       <div class="span6"><a class="btn btn-primary btn-small" href="/atom_feed/">
 		  Subscribe</a></div>
 	    </div>
-	    <p><%= (@posts[32].body[0..250] + link_to(" <b>...</b>".html_safe, feed_post_url(@posts[32]))).html_safe %></p>
+	    <p><%= (@posts[32].body[0..220] + link_to(" <b>...</b>".html_safe, feed_post_url(@posts[32]))).html_safe %></p>
 	    
 	 </div>
       </div>
@@ -55,7 +55,7 @@
 	       <div class="span6"><h4><%= link_to @posts[64].title, feed_post_url(@posts[64]) %></h4></div>
 	       <div class="span6"><a class="btn btn-primary btn-small" href="/atom_feed/?arch=64">Subscribe</a></div>
 	    </div>
-	    <p><%= (@posts[64].body[0..250] + link_to(" <b>...</b>".html_safe, feed_post_url(@posts[64]))).html_safe %></p>
+	    <p><%= (@posts[64].body[0..220] + link_to(" <b>...</b>".html_safe, feed_post_url(@posts[64]))).html_safe %></p>
 	    
 	 </div>
       </div>
