@@ -15,7 +15,7 @@ class Tweet < ActiveRecord::Base
     puts "tweeting...."
     # Status update
     begin
-      embed_code = Twitter.update(tweet).oembed.html
+      embed_code = Twitter.oembed(Twitter.update(tweet).id).html
       Tweet.first.update_attributes({"current#{version == 64 ? 64: ''}".to_sym => embed_code}, :without_protection => true)
 
     rescue Twitter::Error::Forbidden
