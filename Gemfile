@@ -24,7 +24,7 @@ end
 
 gem 'jquery-rails'
 
-gem 'twitter', '~> 3'
+gem 'twitter'
 gem 'sitemap_generator'
 require 'open-uri'
 # To use ActiveModel has_secure_password
