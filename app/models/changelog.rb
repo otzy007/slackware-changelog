@@ -10,7 +10,7 @@ class Changelog < ActiveRecord::Base
       # Get the changelog file
       changelogf = open "ftp://ftp.osuosl.org/pub/slackware/slackware#{version == 32 ? '' : '64'}-current/ChangeLog.txt"      
       oldChange = Changelog.first
-      body = changelogf.read.force_encoding("iso-8859-1")
+      body = changelogf.read.force_encoding("iso-8859-1").encode('UTF-8')
       changelog = body[0 .. 113]
      
       # Verify if there are new changes
