@@ -8,8 +8,8 @@ class Tweet < ActiveRecord::Base
     client = Twitter::REST::Client.new do |config|
       config.consumer_key = twitter_config["consumer_key#{version}"]
       config.consumer_secret = twitter_config["consumer_secret#{version}"]
-      config.oauth_token = twitter_config["oauth_token#{version}"]
-      config.oauth_token_secret = twitter_config["oauth_token_secret#{version}"]
+      config.access_token = twitter_config["oauth_token#{version}"]
+      config.access_token_secret = twitter_config["oauth_token_secret#{version}"]
     end
     puts "current#{version == 64 ? 64: ''}"
     puts "tweeting...."
